@@ -31,12 +31,12 @@ function Nav() {
   });
 
   const onFinish = (values) => {
-    const { mainArray, specArray, copyMainArray, copySpecArray, phoneName } = userClick(values);
+    const { mainArray, specArray, copyMainArray, copySpecArray, names } = userClick(values);
     setMainArray([...mainArray]);
     setSpecArray([...specArray]);
     setCopyMainArray([...copyMainArray]);
     setCopySpecArray([...copySpecArray]);
-    setPhoneName([...phoneName]);
+    setPhoneName([...names]);
   };
 
   useEffect(() => {
@@ -49,8 +49,6 @@ function Nav() {
       }
     });
   }, [mainArray, specArray]);
-
-  const handleChange = function () {};
 
   return (
     <>
@@ -132,7 +130,7 @@ function Nav() {
 
       {mainArray.map((item, index) => {
         return (
-          <>
+          <React.Fragment key={index}>
             <div className="title">{phoneName[index]}</div>
             <div className="group">
               <div className="wrap">
@@ -176,7 +174,7 @@ function Nav() {
                 </div>
               </div>
             </div>
-          </>
+          </React.Fragment>
         );
       })}
     </>
