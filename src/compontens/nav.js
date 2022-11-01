@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import hljs from "highlight.js";
+import hljs from "../utils/highlight.min.js";
 import Clipboard from "clipboard";
 import "highlight.js/styles/base16/railscasts.css";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";

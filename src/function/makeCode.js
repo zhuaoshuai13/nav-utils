@@ -42,7 +42,7 @@ function MakeCode(country, phone = [], over, spec, names) {
 
   // overview部分
 
-  const overview = (over, spec, link) => {
+  const overview = (link) => {
     return `
      <div class="overview now">
        <b class="nav-arrow"><i class="iconfont icon-arrow"></i></b>
@@ -54,7 +54,7 @@ function MakeCode(country, phone = [], over, spec, names) {
      `;
   };
 
-  const specFun = (over, spec, link) => {
+  const specFun = (link) => {
     return `
      <div class="overview now">
        <b class="nav-arrow"><i class="iconfont icon-arrow"></i></b>
@@ -131,9 +131,9 @@ function MakeCode(country, phone = [], over, spec, names) {
           }
         }
       }
-      main += overview(over, spec, item);
+      main += overview(item);
 
-      specs += specFun(over, spec, item);
+      specs += specFun(item);
 
       specs += `</div>`;
 

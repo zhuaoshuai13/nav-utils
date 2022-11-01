@@ -1,9 +1,6 @@
 import MakeCode from "./makeCode";
 
 function NavFunction() {
-  //   const body = document.querySelector("body");
-
-  //   点击按钮
   function userClick(val) {
     let phone = [];
     let phoneName = [];
@@ -23,9 +20,6 @@ function NavFunction() {
     });
 
     return MakeCode(country, phone, over, spec, names);
-
-    // phoneMessage = generateCountryUrl(country, phone);
-    // return result(country, phone, over, spec);
   }
 
   return { userClick };
