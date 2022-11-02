@@ -1,13 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import hljs from "../utils/highlight.min.js";
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
+
 import Clipboard from "clipboard";
 import "highlight.js/styles/base16/railscasts.css";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Space, Divider, Tag } from "antd";
 
 import NavFunction from "../function/navFunction";
+
+hljs.registerLanguage("javascript", javascript);
 
 function Nav() {
   const { userClick } = NavFunction();
